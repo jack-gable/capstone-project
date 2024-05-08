@@ -1,26 +1,39 @@
 import React from "react";
+import "../css/Nav.css";
 
 function Nav() {
 	return (
 		<nav>
-			<ul>
+			<ul className="nav">
 				<li>
-					<a href="/">Home</a>
+					<a className="navLink" href="/">
+						Home
+					</a>
 				</li>
 				<li>
-					<a href="/">About</a>
+					<a className="navLink" href="/">
+						About
+					</a>
 				</li>
 				<li>
-					<a href="/">Menu</a>
+					<a className="navLink" href="/">
+						Menu
+					</a>
 				</li>
 				<li>
-					<a href="/">Reservations</a>
+					<a className="navLink" href="/">
+						Reservations
+					</a>
 				</li>
 				<li>
-					<a href="/">Online Order</a>
+					<a className="navLink" href="/">
+						Online Order
+					</a>
 				</li>
 				<li>
-					<a href="/">Login</a>
+					<a className="navLink" href="/">
+						Login
+					</a>
 				</li>
 			</ul>
 		</nav>

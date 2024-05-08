@@ -1,0 +1,29 @@
+.footer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	padding: 0 200px 0 200px;
+}
+
+.image {
+	align-self: center;
+}
+
+.bottomNav {
+	list-style: none;
+}
+
+.contact {
+	list-style: none;
+}
+
+.social {
+	list-style: none;
+}
+
+@media (max-width: 375px) {
+	.footer {
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		gap: 16px;
+	}
+}

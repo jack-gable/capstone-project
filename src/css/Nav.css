@@ -1,0 +1,29 @@
+.nav {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	gap: 28px;
+	list-style: none;
+	font-size: 20px;
+}
+
+.navLink {
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.navLink:link {
+	color: var(--color-black);
+}
+
+.navLink:visited {
+	color: darkblue;
+}
+
+.navLink:hover {
+	color: var(--color-primary-yellow);
+}
+
+.navLink:active {
+	color: var(--color-primary-green);
+}

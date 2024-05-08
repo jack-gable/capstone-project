@@ -1,11 +1,11 @@
 import React from "react";
+import "../css/Footer.css";
 
 function Footer() {
 	return (
-		<footer>
-			<img href="" alt="" />
-			<ul>
-				<li>Doormat navigation</li>
+		<footer className="footer">
+			<img className="image" src="logo.svg" alt="logo" />
+			<ul className="bottomNav">
 				<li>
 					<a href="/">Home</a>
 				</li>
@@ -25,14 +25,12 @@ function Footer() {
 					<a href="/">Login</a>
 				</li>
 			</ul>
-			<ul>
-				<li>Contact</li>
+			<ul className="contact">
 				<li>address</li>
 				<li>phone number</li>
 				<li>email</li>
 			</ul>
-			<ul>
-				<li>Social</li>
+			<ul className="social">
 				<li>address</li>
 				<li>phone number</li>
 				<li>email</li>

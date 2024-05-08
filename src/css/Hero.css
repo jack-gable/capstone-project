@@ -1,0 +1,35 @@
+.hero {
+	display: flex;
+	justify-content: space-between;
+	background-color: var(--color-primary-green);
+	color: var(--color-white);
+	padding: 0 200px 0 200px;
+}
+
+.heroText {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	width: 280px;
+	padding-top: 50px;
+}
+
+.heroTitle {
+	font-size: calc(56 / 16 * 1rem);
+	color: var(--color-primary-yellow);
+	line-height: 1;
+}
+
+.heroSubtitle {
+	font-size: calc(32 / 16 * 1rem);
+}
+
+.heroDesc {
+	font-size: calc(20 / 16 * 1rem);
+}
+
+.heroImg {
+	position: relative;
+	top: 30px;
+	border-radius: 8px;
+}
