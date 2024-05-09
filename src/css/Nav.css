@@ -10,20 +10,21 @@
 .navLink {
 	text-decoration: none;
 	font-weight: 700;
+	padding: 2px 4px;
+	border-radius: 10px;
 }
 
 .navLink:link {
 	color: var(--color-black);
 }
 
-.navLink:visited {
-	color: darkblue;
+.navLink:hover,
+.navLink:focus {
+	color: var(--color-white);
+	background-color: var(--color-primary-green);
 }
 
-.navLink:hover {
-	color: var(--color-primary-yellow);
-}
-
-.navLink:active {
-	color: var(--color-primary-green);
+nav a.active {
+	color: var(--color-white);
+	background-color: var(--color-primary-green);
 }

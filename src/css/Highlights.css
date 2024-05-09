@@ -1,9 +1,10 @@
-.cardContainer {
-	display: flex;
+.highlights {
+	padding: 42px 200px;
 }
 
-.btn {
+.cardContainer {
 	display: flex;
-	gap: 16px;
-	align-items: center;
+	justify-content: space-between;
+	gap: 35px;
+	padding-top: 40px;
 }

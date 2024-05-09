@@ -1,15 +1,17 @@
 .footer {
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
-	padding: 0 200px 0 200px;
+	padding: 60px 200px;
+	background-color: var(--color-gray);
 }
 
 .image {
 	align-self: center;
 }
 
-.bottomNav {
-	list-style: none;
+.footerLink:hover,
+.footerLink:focus {
+	text-decoration: underline;
 }
 
 .contact {

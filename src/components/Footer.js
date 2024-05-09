@@ -1,30 +1,32 @@
 import React from "react";
 import "../css/Footer.css";
+import { NavLink } from "react-router-dom";
+import { Flex } from "@chakra-ui/react";
 
 function Footer() {
 	return (
 		<footer className="footer">
 			<img className="image" src="logo.svg" alt="logo" />
-			<ul className="bottomNav">
-				<li>
-					<a href="/">Home</a>
-				</li>
-				<li>
-					<a href="/">About</a>
-				</li>
-				<li>
-					<a href="/">Menu</a>
-				</li>
-				<li>
-					<a href="/">Reservations</a>
-				</li>
-				<li>
-					<a href="/">Online Order</a>
-				</li>
-				<li>
-					<a href="/">Login</a>
-				</li>
-			</ul>
+			<Flex flexDirection="column">
+				<NavLink className="footerLink" to="/">
+					Home
+				</NavLink>
+				<NavLink className="footerLink" to="/about">
+					About
+				</NavLink>
+				<NavLink className="footerLink" to="/menu">
+					Menu
+				</NavLink>
+				<NavLink className="footerLink" to="/reservations">
+					Reservations
+				</NavLink>
+				<NavLink className="footerLink" to="/order">
+					Order Online
+				</NavLink>
+				<NavLink className="footerLink" to="/login">
+					Login
+				</NavLink>
+			</Flex>
 			<ul className="contact">
 				<li>address</li>
 				<li>phone number</li>

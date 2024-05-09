@@ -1,7 +1,8 @@
 import React from "react";
 import "../css/Hero.css";
-import { Image } from "@chakra-ui/react";
+import { Button, Image } from "@chakra-ui/react";
 import foodImage from "../icons_assets/restauranfood.jpg";
+import { Link } from "react-router-dom";
 
 function Hero() {
 	return (
@@ -15,7 +16,9 @@ function Hero() {
 					We are a family owned Mediterranean restaurant, focused on
 					traditional recipes served with a modern twist.
 				</p>
-				<button>Reserve A Table</button>
+				<Button width={200} colorScheme="yellow">
+					<Link to="/">Reserve A Table</Link>
+				</Button>
 			</article>
 			<Image
 				src={foodImage}
