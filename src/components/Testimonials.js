@@ -1,16 +1,32 @@
-import { Card, CardBody, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Card,
+	CardBody,
+	Flex,
+	Image,
+	Stack,
+	Text,
+} from "@chakra-ui/react";
 import React from "react";
-import "../css/Testimonials.css";
 import { FaStar } from "react-icons/fa6";
 import person from "../icons_assets/testimonial.png";
 
 function Testimonials() {
 	return (
-		<section className="testimonials">
+		<Box
+			as="section"
+			padding={{ base: "25px", md: "42px 200px" }}
+			backgroundColor={"var(--color-gray)"}
+		>
 			<Text as="h2" fontSize={36} textAlign="center" paddingBottom={10}>
 				Testimonials
 			</Text>
-			<Flex justifyContent="space-between">
+			<Flex
+				justifyContent="space-between"
+				flexDirection={{ base: "column", md: "row" }}
+				alignItems={"center"}
+				gap={{ base: "16px", md: 0 }}
+			>
 				<Card width={200} borderRadius={16}>
 					<CardBody>
 						<Stack>
@@ -80,7 +96,7 @@ function Testimonials() {
 					</CardBody>
 				</Card>
 			</Flex>
-		</section>
+		</Box>
 	);
 }
 

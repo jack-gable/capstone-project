@@ -1,24 +1,41 @@
 import React from "react";
-import "../css/Highlights.css";
 import greekSalad from "../icons_assets/greek salad.jpg";
 import bruchetta from "../icons_assets/bruchetta.svg";
 import lemonDessert from "../icons_assets/lemon dessert.jpg";
 import CardComponent from "./CardComponent";
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
 function Highlights() {
 	return (
-		<section className="highlights">
-			<Flex justifyContent="space-between" alignItems="center">
-				<Text as="h2" fontSize={64}>
+		<Box
+			as="section"
+			padding={{ base: "25px", md: "42px 200px" }}
+			className="highlights"
+		>
+			<Flex
+				flexDirection={{ base: "column", md: "row" }}
+				justifyContent={"space-between"}
+				alignItems="center"
+				paddingBottom={{ base: 25, md: 0 }}
+			>
+				<Text
+					as="h2"
+					fontSize={{ base: 32, md: 64 }}
+					width={"max-content"}
+				>
 					This Weeks Specials!
 				</Text>
-				<Button width={200} colorScheme="yellow">
-					<Link to="/">Online Menu</Link>
+				<Button width={{ base: "auto", md: 200 }} colorScheme="yellow">
+					<Link to="/order">Online Menu</Link>
 				</Button>
 			</Flex>
-			<div className="cardContainer">
+			<Flex
+				justifyContent={"space-between"}
+				alignItems={{ base: "center", md: 0 }}
+				gap={{ base: "25px", md: 0 }}
+				flexDirection={{ base: "column", md: "row" }}
+			>
 				<CardComponent
 					image={greekSalad}
 					title="Greek Salad"
@@ -37,8 +54,8 @@ function Highlights() {
 					price="5.00"
 					desc="This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined."
 				/>
-			</div>
-		</section>
+			</Flex>
+		</Box>
 	);
 }
 

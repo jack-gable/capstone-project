@@ -1,42 +1,37 @@
 import React from "react";
-import "../css/Footer.css";
-import { NavLink } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Flex, Grid, Image, Link, Stack, Text } from "@chakra-ui/react";
 
 function Footer() {
 	return (
-		<footer className="footer">
-			<img className="image" src="logo.svg" alt="logo" />
-			<Flex flexDirection="column">
-				<NavLink className="footerLink" to="/">
-					Home
-				</NavLink>
-				<NavLink className="footerLink" to="/about">
-					About
-				</NavLink>
-				<NavLink className="footerLink" to="/menu">
-					Menu
-				</NavLink>
-				<NavLink className="footerLink" to="/reservations">
-					Reservations
-				</NavLink>
-				<NavLink className="footerLink" to="/order">
-					Order Online
-				</NavLink>
-				<NavLink className="footerLink" to="/login">
-					Login
-				</NavLink>
-			</Flex>
-			<ul className="contact">
-				<li>address</li>
-				<li>phone number</li>
-				<li>email</li>
-			</ul>
-			<ul className="social">
-				<li>address</li>
-				<li>phone number</li>
-				<li>email</li>
-			</ul>
+		<footer>
+			<Grid
+				templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
+				templateRows={{ base: "repeat(4, 1fr)", md: "1fr" }}
+				alignItems={"center"}
+				justifyItems={"center"}
+				gap={{ base: "16px", md: 0 }}
+				padding={{ base: 25, md: "60px 200px" }}
+			>
+				<Image alignSelf={"center"} src="logo.svg" alt="logo" />
+				<Flex flexDirection="column">
+					<Link to="/">Home</Link>
+					<Link to="/about">About</Link>
+					<Link to="/menu">Menu</Link>
+					<Link to="/reservations">Reservations</Link>
+					<Link to="/order">Order Online</Link>
+					<Link to="/login">Login</Link>
+				</Flex>
+				<Stack alignSelf={{ md: "flex-start" }}>
+					<Text>address</Text>
+					<Text>phone number</Text>
+					<Text>email</Text>
+				</Stack>
+				<Stack alignSelf={{ md: "flex-start" }}>
+					<Text>address</Text>
+					<Text>phone number</Text>
+					<Text>email</Text>
+				</Stack>
+			</Grid>
 		</footer>
 	);
 }

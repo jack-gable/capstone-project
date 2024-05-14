@@ -28,3 +28,20 @@ nav a.active {
 	color: var(--color-white);
 	background-color: var(--color-primary-green);
 }
+
+.mobileNav {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 28px;
+	list-style: none;
+	font-size: 20px;
+	padding-top: 75px;
+}
+
+.mobileLink {
+	text-decoration: none;
+	font-weight: 700;
+	padding: 2px 4px;
+	border-radius: 10px;
+}

@@ -37,7 +37,7 @@ function CardComponent({ image, title, price, desc }) {
 					flexDirection="column"
 					gap={6}
 					justifyContent="space-between"
-					className="cardBody"
+					padding={"20px 25px 16px"}
 				>
 					<Stack
 						direction="row"

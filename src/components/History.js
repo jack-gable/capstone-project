@@ -1,14 +1,17 @@
-import { Flex, Image, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Show, Text } from "@chakra-ui/react";
 import React from "react";
-import "../css/History.css";
 import mario from "../icons_assets/Mario and Adrian A.jpg";
 import restaurant from "../icons_assets/restaurant.jpg";
 
 function History() {
 	return (
-		<section className="history">
-			<Flex alignItems="center" justifyContent="space-between">
-				<article className="heroText">
+		<Box padding={{ base: 25, md: "40px 200px 80px" }}>
+			<Flex
+				alignItems="center"
+				justifyContent={"space-between"}
+				flexDirection={{ base: "column", md: "row" }}
+			>
+				<article>
 					<div>
 						<Text as="h3" fontSize="4xl">
 							Little Lemon
@@ -17,19 +20,32 @@ function History() {
 							Chicago
 						</Text>
 					</div>
-					<Text>
+					<Text maxW={375}>
 						Sunt minim est nostrud velit velit dolore nulla mollit
 						commodo. Occaecat consectetur magna deserunt laboris
 						laboris aute elit. Aliqua ipsum ad adipisicing id aute
 						cillum.
 					</Text>
 				</article>
-				<div className="imageContainer">
-					<Image borderRadius={16} className="image1" src={mario} />
-					<Image borderRadius={16} src={restaurant} />
-				</div>
+				<Show breakpoint="(min-width: 550px)">
+					<Box
+						width={275}
+						position={"relative"}
+						className="imageContainer"
+					>
+						<Image
+							position={"absolute"}
+							bottom={"-40%"}
+							left={"-70%"}
+							borderRadius={16}
+							className="image1"
+							src={mario}
+						/>
+						<Image borderRadius={16} src={restaurant} />
+					</Box>
+				</Show>
 			</Flex>
-		</section>
+		</Box>
 	);
 }
 
