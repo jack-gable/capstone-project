@@ -9,14 +9,12 @@ import {
 	Select,
 } from "@chakra-ui/react";
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect } from "react-router-dom";
 import { submitAPI } from "../utils";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const BookingForm = ({ availableTimes, dispatch, ...props }) => {
-	const navigate = useNavigate();
-
 	const formik = useFormik({
 		initialValues: {
 			date: new Date().toLocaleDateString("en-CA"),
@@ -28,7 +26,7 @@ const BookingForm = ({ availableTimes, dispatch, ...props }) => {
 			const response = submitAPI(values);
 			if (response) {
 				localStorage.setItem("Bookings", JSON.stringify(values));
-				navigate("/confirmation");
+				redirect("/confirmation");
 				// console.log(values);
 			}
 		},

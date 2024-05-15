@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/Nav.css";
+import "../Nav.css";
 import { NavLink } from "react-router-dom";
 import { FiMenu } from "react-icons/fi";
 import {

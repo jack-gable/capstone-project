@@ -1,14 +1,19 @@
 import React from "react";
-import "../css/Header.css";
 import Nav from "./Nav";
-import { Image } from "@chakra-ui/react";
+import { Box, Flex, Image } from "@chakra-ui/react";
 
 function Header() {
 	return (
-		<header className="header">
-			<Image src="logo.svg" alt="logo" />
-			<Nav />
-		</header>
+		<Box as="header">
+			<Flex
+				justifyContent={"space-between"}
+				alignItems={"center"}
+				padding={{ base: "16px 25px", md: "25px 200px" }}
+			>
+				<Image src="logo.svg" alt="Logo" />
+				<Nav />
+			</Flex>
+		</Box>
 	);
 }
 

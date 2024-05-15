@@ -1,5 +1,4 @@
 import React from "react";
-import "../css/Card.css";
 import bikeIcon from "../icons_assets/bike.svg";
 import {
 	Card,
@@ -7,10 +6,10 @@ import {
 	Flex,
 	Heading,
 	Image,
+	Link,
 	Stack,
 	Text,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
 
 function CardComponent({ image, title, price, desc }) {
 	return (
@@ -51,10 +50,17 @@ function CardComponent({ image, title, price, desc }) {
 					</Stack>
 					<Text>{desc}</Text>
 				</Flex>
-				<Link className="btn" to="/order">
-					Order a delivery
+				<Flex
+					gap={"10px"}
+					alignItems={"center"}
+					position={"absolute"}
+					bottom={"20px"}
+					left={"25px"}
+					fontWeight={700}
+				>
+					<Link href="/order">Order a delivery</Link>
 					<Image src={bikeIcon} alt="" />
-				</Link>
+				</Flex>
 			</CardBody>
 		</Card>
 	);

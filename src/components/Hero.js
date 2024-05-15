@@ -1,7 +1,14 @@
 import React from "react";
-import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react";
+import {
+	Box,
+	Button,
+	Flex,
+	Heading,
+	Image,
+	Link,
+	Text,
+} from "@chakra-ui/react";
 import foodImage from "../icons_assets/restauranfood.jpg";
-import { Link } from "react-router-dom";
 
 function Hero() {
 	return (
